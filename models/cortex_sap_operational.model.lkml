@@ -1,5 +1,5 @@
 # Define the database connection to be used for this model.
-connection: "@{CONNECTION_NAME}"
+connection: "sap-cortex-demo"
 
 # include all the views
 include: "/views/**/*.view"
@@ -34,7 +34,7 @@ named_value_format: Greek_Number_Format {
 }
 
 explore: data_intelligence_ar {
-sql_always_where: ${Client_ID} = "@{CLIENT}" ;;
+sql_always_where: ${Client_ID} = "800" ;;
   join: currency_conversion_new {
     type: left_outer
     relationship: one_to_many
